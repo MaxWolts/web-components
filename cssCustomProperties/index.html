@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="./index.js" defer></script>
+
+<style>
+    my-component {
+        --background-color: lightyellow;
+        --font-color: steelblue;
+    }
+</style>
+
+<body>
+    <my-component>
+        <h1 slot="title" class="title">Titulo 1</h1>
+        <p slot="paragraph" class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam minus ipsum atque sit voluptatibus deserunt molestiae qui quaerat, inventore voluptates assumenda obcaecati reiciendis eveniet soluta vel impedit, debitis a natus!</p>
+    </my-component>
+</body>
+</html>
