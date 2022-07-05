@@ -22,7 +22,7 @@ class myComponent extends HTMLElement {
           <div class="component__body-section">
             <div class="body-section__header">
                 <h2 class="title">${this.title}</h2>
-                <small class="subTitle">${this.subtitle}</small>
+                <span class="subTitle">${this.subtitle}</span>
             </div>
             <p class="description"> ${this.description} </p>
             <div class="body-section__buy">
@@ -86,7 +86,7 @@ class myComponent extends HTMLElement {
                 display: inline;
                 font-size: 40px;
             }
-            .body-section__header small {
+            .body-section__header span {
                 font-family: fantasy;
                 font-size: 22px;
                 letter-spacing: 2px;
@@ -124,7 +124,7 @@ class myComponent extends HTMLElement {
                     width: 50%;
                     padding: 10% 5%;
                 }
-                .body-section__header small {
+                .body-section__header span {
                     display: block;
                 }
                 .description {
@@ -143,8 +143,11 @@ class myComponent extends HTMLElement {
         </style>
     `;
   }
-  connectedCallback() {
+  render() {
     this.shadowRoot.appendChild(this.getTemplate().content.cloneNode(true))
+  }
+  connectedCallback() {
+    this.render()
   }
 }
 
